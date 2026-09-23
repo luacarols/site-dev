@@ -65,7 +65,7 @@ export const models = [
     summary:
       'Para quem tem vários serviços ou produtos e quer uma página exclusiva para cada um.',
     idealFor: 'Empresas com vários serviços que querem aparecer no Google.',
-    price: 'R$ 1.800 – R$ 3.500',
+    price: 'R$ 1.400 – R$ 3.500',
     support: 'R$ 150 – R$ 250/mês',
     pages: [
       {
@@ -99,7 +99,7 @@ export const models = [
     summary:
       'Página enxuta, feita para um objetivo único: vender um produto, captar contatos para uma promoção etc. Não é para "navegar", é para convencer e fazer a pessoa agir.',
     idealFor: 'Lançamentos, promoções e campanhas com prazo.',
-    price: 'R$ 1.200 – R$ 2.500',
+    price: 'R$ 1000 – R$ 1.500',
     support: 'Combinada à parte',
     supportNote: 'Costuma acompanhar a duração da campanha.',
     pages: [
