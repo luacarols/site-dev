@@ -100,31 +100,48 @@ function ModelSection({ model }) {
 export default function App() {
   return (
     <div className="page">
-      <header className="intro">
+      <header className="topbar">
+        <span className="brand">Guia de sites<b>.</b></span>
+        <nav className="topbar-links" aria-label="Modelos">
+          {models.map((m) => (
+            <a key={m.id} href={`#${m.id}`}>{m.name}</a>
+          ))}
+        </nav>
+        <a href="#modelos" className="btn btn-dark">Ver modelos</a>
+      </header>
+
+      <section className="hero">
         <h1>Modelos de site</h1>
         <p>
           Estes são os tipos de site que desenvolvo. Para cada um você encontra
           como a página é organizada, um esboço do visual esperado e a faixa de valor.
         </p>
-        <p className="intro-tip">
-          Passe o mouse (ou toque) nas etapas para ver onde cada parte fica no desenho.
-        </p>
-      </header>
+        <div className="hero-actions">
+          <a href="#modelos" className="btn btn-light">Comparar modelos</a>
+          <a href="#notas" className="btn btn-outline">Bom saber</a>
+        </div>
+      </section>
 
-      <nav className="overview" aria-label="Resumo dos modelos">
-        {models.map((m) => (
-          <a key={m.id} href={`#${m.id}`} className="overview-card">
-            <span className="overview-num">{m.number}</span>
-            <strong>{m.name}</strong>
-            <span className="overview-sub">{m.idealFor}</span>
-            <span className="overview-price">{m.price}</span>
-          </a>
-        ))}
-      </nav>
+      <section className="overview-wrap" id="modelos">
+        <div className="section-title">
+          <h2>Qual site combina com o seu negócio?</h2>
+          <p>Passe o mouse (ou toque) nas etapas de cada modelo para ver onde cada parte fica no desenho.</p>
+        </div>
+        <nav className="overview" aria-label="Resumo dos modelos">
+          {models.map((m) => (
+            <a key={m.id} href={`#${m.id}`} className="overview-card">
+              <span className="overview-num">{m.number}</span>
+              <strong>{m.name}</strong>
+              <span className="overview-sub">{m.idealFor}</span>
+              <span className="overview-price">{m.price}</span>
+            </a>
+          ))}
+        </nav>
+      </section>
 
       {models.map((m) => <ModelSection key={m.id} model={m} />)}
 
-      <section className="notes">
+      <section className="notes" id="notas">
         <h2>Bom saber</h2>
         <ul>
           <li>
