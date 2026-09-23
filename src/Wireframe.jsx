@@ -25,11 +25,11 @@ const Links = ({ items }) => (
 );
 const Logo = () => <span className="wf-logo" />;
 
-const Card = ({ price }) => (
+const Card = () => (
   <Col gap={4} style={{ flex: 1 }}>
     <Img h={34} />
     <Line w="80%" strong />
-    {price ? <Line w="40%" /> : <><Line /><Line w="70%" /></>}
+    <Line /><Line w="70%" />
   </Col>
 );
 
@@ -62,13 +62,6 @@ const blocks = {
         <span className="wf-link">Blog</span>
         <span className="wf-link">Contato</span>
       </Row>
-    </Row>
-  ),
-  'nav-shop': () => (
-    <Row className="spread" align="center">
-      <Logo />
-      <Links items={['Roupas', 'Acessórios', 'Ofertas']} />
-      <span className="wf-cart">🛒<b>2</b></span>
     </Row>
   ),
   'no-nav': () => (
@@ -116,19 +109,6 @@ const blocks = {
         <Line w="55%" />
         <Btn w={110} big />
       </Col>
-    </div>
-  ),
-  'hero-promo': () => (
-    <div className="wf-hero promo">
-      <Row gap={10} align="center">
-        <Col gap={5} style={{ flex: 1 }}>
-          <span className="wf-badge">-30%</span>
-          <Line w="80%" h={10} strong />
-          <Btn w={60} />
-        </Col>
-        <Img h={56} style={{ flex: 1 }} />
-      </Row>
-      <Dots />
     </div>
   ),
 
@@ -187,15 +167,6 @@ const blocks = {
       {[0, 1, 2].map((i) => (
         <Col key={i} gap={4} style={{ flex: 1 }}>
           <Line w="50%" strong /><Line w="80%" /><Line w="65%" />
-        </Col>
-      ))}
-    </Row>
-  ),
-  'footer-shop': () => (
-    <Row gap={10}>
-      {['Trocas', 'Entrega', 'Contato'].map((t) => (
-        <Col key={t} gap={4} style={{ flex: 1 }}>
-          <span className="wf-label">{t}</span><Line w="80%" /><Line w="60%" />
         </Col>
       ))}
     </Row>
@@ -286,44 +257,6 @@ const blocks = {
     </Col>
   ),
 
-  'product-grid': () => (
-    <Col gap={6}>
-      <Line w="30%" strong />
-      <div className="wf-grid"><Card price /><Card price /><Card price /><Card price /></div>
-    </Col>
-  ),
-  'product-page': () => (
-    <Row gap={10}>
-      <Col gap={4} style={{ flex: 1 }}>
-        <Img h={80} />
-        <Row gap={4}><Img h={18} style={{ flex: 1 }} /><Img h={18} style={{ flex: 1 }} /><Img h={18} style={{ flex: 1 }} /></Row>
-      </Col>
-      <Col gap={6} style={{ flex: 1 }}>
-        <Line w="80%" h={10} strong />
-        <span className="wf-price">R$ 129,90</span>
-        <Line /><Line w="70%" />
-        <Row gap={4}>{['P', 'M', 'G'].map((s) => <span key={s} className="wf-size">{s}</span>)}</Row>
-        <span className="wf-btn solid">Comprar</span>
-      </Col>
-    </Row>
-  ),
-  checkout: () => (
-    <Row gap={10}>
-      <Col gap={6} style={{ flex: 1.4 }}>
-        {[0, 1].map((i) => (
-          <Row key={i} gap={6} align="center">
-            <Img h={26} style={{ width: 26, flex: 'none' }} />
-            <Col gap={3} style={{ flex: 1 }}><Line w="70%" strong /><Line w="30%" /></Col>
-          </Row>
-        ))}
-      </Col>
-      <div className="wf-summary">
-        <Line w="60%" strong /><Line /><Line w="80%" />
-        <Row gap={4}><span className="wf-pay">Pix</span><span className="wf-pay">Cartão</span></Row>
-        <span className="wf-btn solid">Finalizar</span>
-      </div>
-    </Row>
-  ),
 };
 
 export default function Wireframe({ page, active, onHover, numberOf }) {

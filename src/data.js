@@ -119,38 +119,4 @@ export const models = [
       { block: 'cta-final', title: 'Botão de ação final', text: 'Repetido, para quem rolou a página toda.' },
     ],
   },
-  {
-    id: 'loja',
-    number: 5,
-    name: 'Loja virtual simples',
-    subtitle: 'E-commerce básico',
-    summary:
-      'Para quem vende produtos diretamente pelo site, com carrinho e pagamento.',
-    idealFor: 'Quem quer vender online sem depender só de marketplace ou direct.',
-    price: 'R$ 3.000 – R$ 7.000+',
-    support: 'R$ 200 – R$ 400/mês',
-    pages: [
-      {
-        name: 'Home',
-        blocks: ['nav-shop', 'hero-promo', 'product-grid', 'testimonials', 'footer-shop'],
-      },
-      {
-        name: 'Produto',
-        blocks: ['nav-shop', 'product-page', 'footer-shop'],
-      },
-      {
-        name: 'Carrinho',
-        blocks: ['nav-shop', 'checkout', 'footer-shop'],
-      },
-    ],
-    flow: [
-      { block: 'nav-shop', title: 'Barra de navegação', text: 'Categorias de produtos + ícone do carrinho de compras.' },
-      { block: 'hero-promo', title: 'Banner', text: 'Promoções ou produtos em destaque.' },
-      { block: 'product-grid', title: 'Vitrine de produtos', text: 'Grade com fotos, nome e preço.' },
-      { block: 'product-page', title: 'Página do produto', text: 'Detalhes, fotos e botão "comprar".', page: 1 },
-      { block: 'checkout', title: 'Carrinho e checkout', text: 'Onde o cliente finaliza a compra e paga (Pix, cartão).', page: 2 },
-      { block: 'testimonials', title: 'Depoimentos', text: 'Avaliações de quem já comprou.' },
-      { block: 'footer-shop', title: 'Rodapé', text: 'Políticas de troca, entrega e contato.' },
-    ],
-  },
 ];

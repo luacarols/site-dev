@@ -92,6 +92,11 @@ function ModelSection({ model }) {
           <span className="price-value small">{model.support}</span>
           {model.supportNote && <span className="price-note">{model.supportNote}</span>}
         </div>
+        <div className="price-extra">
+          <span className="price-label">Anúncios pagos</span>
+          <span className="price-value small">Adicional a combinar</span>
+          <span className="price-note">Google Ads e posts patrocinados.</span>
+        </div>
       </div>
     </section>
   );
@@ -147,6 +152,11 @@ export default function App() {
           <li>
             <strong>Sustentação mensal</strong> é o valor para manter o site funcionando
             depois de pronto. O que entra exatamente é combinado conforme a necessidade de cada projeto.
+          </li>
+          <li>
+            <strong>Anúncios pagos</strong> (Google Ads, posts patrocinados no Instagram/Facebook)
+            podem ser incluídos em qualquer modelo como serviço adicional, com valor a combinar.
+            A verba dos anúncios é paga direto à plataforma e fica à parte.
           </li>
           <li>
             Os valores são faixas: o preço final depende da quantidade de páginas,
